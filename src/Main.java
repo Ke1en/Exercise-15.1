@@ -38,7 +38,7 @@ public class Main {
                 .mapToDouble(Transaction::getTotalPrice)
                 .sum();
 
-        System.out.println("Money received after selling all products " + receivedMoney + " (in rubles)");
+        System.out.println("Money received after selling all products: " + receivedMoney + " (in rubles)");
         // Продукт с наибольшим количеством продаж.
         Transaction maxQuantity = transactionList.stream()
                 .max(Comparator.comparingInt(Transaction::getQuantity))
